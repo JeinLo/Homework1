@@ -10,55 +10,239 @@ body{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
 }
-
 .center{
     padding-left: calc(50% - 600px);
     padding-right: calc(50% - 600px);
 }
 
 .header{
-    width: 1440px;
-    height: 800px;
+    max-height: 800px;
     background: rgb(225, 255, 143);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     &__title{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     font-size: 64px;
     font-weight: 700;
     line-height: 78px;
-    text-align: left;
+    width: 768px;
+    padding-top: 196px;
+    padding-bottom: 24px;
     }
     &__text{
-     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     font-size: 24px;
     font-weight: 400;
     line-height: 32px;
-    text-align: left;
-    }
-    &__bold{
-        font-weight: 600;
+    width: 720px;
+    padding-bottom: 48px;
+        &-bold{
+            font-weight: 600;
+        }
     }
     &__input{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 10;
-        padding: 16px 28px 16px 28px;
-        margin: 48px 0px;
+        width: 247px;
+        height: 66px;
         border: 1px solid rgb(32, 32, 39);
         border-radius: 60px;
         background: rgb(32, 32, 39);
         color: #FFFFFF;
         font-size: 24px;
         font-weight: 600;
-        line-height: 141.69%;
-        letter-spacing: 0%;
         text-align: center;
+        margin-bottom: 156px;
     }
 }
+    .banner{
+        height: 90px;
+        display: flex;
+        align-items: center;
+        padding: 27px 49px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(50px);
+        background: rgb(188, 236, 48);
+        flex-wrap: wrap;
+
+        &__text{
+            color: rgb(32, 32, 39);
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding-right: 51px;
+            padding-left: 51px;
+        }
+    }
+    .conteiner{
+        background: rgb(32, 32, 39); 
+        height: 100%;
+    }
+    .title{
+        margin: 0;
+        color: rgb(255, 255, 255);
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        text-align: left;
+        padding-top: 77px;
+        padding-bottom: 24px;
+        &-mini{
+            padding-top: 46px;
+            padding-bottom: 72px;
+        }
+        &__text{
+            margin: 0;
+            width: 788px;
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            padding-bottom: 72px;
+        }
+    }
+    .img{
+        max-height: 1060px;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, 1fr);/*идет вниз, а не располагается по контенту с columns*/
+        gap: 32px;
+
+        &__card{
+            display: flex;
+                flex-direction: column;
+                grid-column: span 4;
+                background-color: #FFFFFF ;
+                border-radius: 30px;
+        }
+        &__item{
+            border-radius: 30px;
+            height: 314px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &__item_1{
+            background: url(/img/card1.svg);
+        }
+        &__item_2{
+            background: url(/img/card2.svg);
+        }
+        &__item_3{
+            background: url(/img/card3.svg);
+        }
+        &__item_4{
+            background: url(/img/card4.svg);
+        }
+        &__item_5{
+            background: url(/img/card5.svg);
+        }
+        &__item_6{
+            background: url(/img/card6.svg);
+        }
+        &__number{
+            width: 111px;
+            height: 36px;
+            color: rgb(32, 32, 39);
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 52.58px;
+            background: rgb(247, 247, 247);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 13px;
+            margin-left: 32px;
+            margin-bottom: 10px;
+        }
+        &__text{
+            color: rgb(32, 32, 39);
+            font-size: 32px;
+            font-weight: 700;
+            text-align: left;
+            padding: 0 36px 32px;
+        }
+        /* Съехал Грид*/
+       /* &__big{
+          grid-row: span 12;
+        }*/
+        &__small{
+            grid-row: span 11;
+        }
+    }
+    .galery{
+    display: grid;
+    /*grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);*/
+    max-width: 1200px;
+    border-radius: 30px;
+
+        &__item{
+            margin-bottom: 32px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            max-width: 1200px;
+            border-radius: 30px;
+          color: rgb(32, 32, 39);
+          background-repeat: no-repeat;
+        }
+        &__item_1{
+            background: url(/img/img1.svg);
+            
+        }
+        &__item_2{
+            background: url(/img/img2.svg);
+        }
+        &__item_3{
+            background: url(/img/img3.svg);
+        }
+        &__item_4{
+            background: url(/img/img4.svg);
+        }
+        &__item_5{
+            background: url(/img/img5.svg);
+        }
+        &__item_6{
+            background: url(/img/img6.svg);
+        }
+        &__title{
+            color: rgb(32, 32, 39);
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 59px;
+            padding-top: 48px;
+            padding-bottom: 24px;
+        }
+        &__text{
+            color: rgb(32, 32, 39);
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            padding-bottom: 36px;
+        }
+        &__button{
+            width: 247px;
+            height: 66px;
+            border: 1px solid rgb(32, 32, 39);
+            border-radius: 60px;
+            background: rgb(32, 32, 39);
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+    .footer{
+        height: 150px;
+        background: rgb(189, 237, 53);
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        text-align: center;
+        padding-top: 61px;
+    }
+
+
+
+
+    

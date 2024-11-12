@@ -1,10 +1,12 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/*html {
+    scroll-behavior: smooth;
+  }*/
 a {
   text-decoration: none;
 }
@@ -23,8 +25,9 @@ body {
   max-height: 800px;
   background: rgb(225, 255, 143);
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: calc(100% + 480px) -400px, calc(100% - 1312px) 88px, calc(100% - 1258px) 50px, calc(100% - 346px) 540px, calc(100% - 436px) 495px;
+  overflow: hidden;
+  background-image: url("/img/Star-top.svg"), url("/img/Star 2.svg"), url("/img/Star 3.svg"), url("/img/Star 4.svg"), url("/img/Star 5.svg");
 }
 .header__title {
   font-size: 64px;
@@ -44,7 +47,7 @@ body {
 .header__text-bold {
   font-weight: 600;
 }
-.header__input {
+.header__button {
   width: 247px;
   height: 66px;
   border: 1px solid rgb(32, 32, 39);
@@ -55,9 +58,11 @@ body {
   font-weight: 600;
   text-align: center;
   margin-bottom: 156px;
+  font-family: "Montserrat";
 }
 
 .banner {
+  width: 3220px;
   height: 90px;
   display: flex;
   align-items: center;
@@ -67,6 +72,7 @@ body {
           backdrop-filter: blur(50px);
   background: rgb(188, 236, 48);
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .banner__text {
   color: rgb(32, 32, 39);
@@ -75,11 +81,6 @@ body {
   text-transform: uppercase;
   padding-right: 51px;
   padding-left: 51px;
-}
-
-.conteiner {
-  background: rgb(32, 32, 39);
-  height: 100%;
 }
 
 .title {
@@ -98,7 +99,7 @@ body {
 }
 .title__text {
   margin: 0;
-  width: 788px;
+  width: 700px;
   color: rgb(255, 255, 255);
   font-size: 24px;
   font-weight: 400;
@@ -106,17 +107,23 @@ body {
   padding-bottom: 72px;
 }
 
+.img__conteiner {
+  background: rgb(32, 32, 39);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: calc(100% + 91px) 94px, calc(100% - 1355px) 730px, calc(100% - 1322px) 794px;
+  background-image: url("/img/Star 1.svg"), url("/img/Star 11.svg"), url("/img/Star 12.svg");
+  overflow: hidden;
+}
+
 .img {
   max-height: 1060px;
   max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 1fr); /*идет вниз, а не располагается по контенту с columns*/
+  grid-template-rows: repeat(3, 1fr);
   gap: 32px;
-  /* Съехал Грид*/
-  /* &__big{
-     grid-row: span 12;
-   }*/
+  align-items: start;
 }
 .img__card {
   display: flex;
@@ -124,6 +131,9 @@ body {
   grid-column: span 4;
   background-color: #FFFFFF;
   border-radius: 30px;
+}
+.img__card_top {
+  margin-top: -40px;
 }
 .img__item {
   border-radius: 30px;
@@ -171,52 +181,66 @@ body {
   font-weight: 700;
   text-align: left;
   padding: 0 36px 32px;
+  max-width: 372px;
 }
-.img__small {
-  grid-row: span 11;
+
+.galery__conteiner {
+  background: rgb(32, 32, 39);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 49px) 111px, calc(100% - 125px) 85px, calc(100% - 47px) 3372px, calc(100% - 139px) 3426px;
+  background-image: url("/img/Star 6.svg"), url("/img/Star 7.svg"), url("/img/Star 8.svg"), url("/img/Star 10.svg");
+  overflow: hidden;
+  padding-bottom: 144px;
 }
 
 .galery {
-  display: grid;
-  /*grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);*/
-  max-width: 1200px;
   border-radius: 30px;
 }
 .galery__item {
   margin-bottom: 32px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  max-width: 1200px;
   border-radius: 30px;
   color: rgb(32, 32, 39);
   background-repeat: no-repeat;
+  height: 500px;
+  width: 100%;
+  padding: 48px;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+.galery__item_right {
+  background-position-x: right;
+}
+.galery__item_left {
+  background-position-x: left;
+  align-items: flex-end;
 }
 .galery__item_1 {
-  background: url(/img/img1.svg);
+  background-image: url(/img/img1.svg);
 }
 .galery__item_2 {
-  background: url(/img/img2.svg);
+  background-image: url(/img/img2.svg);
 }
 .galery__item_3 {
-  background: url(/img/img3.svg);
+  background-image: url(/img/img3.svg);
 }
 .galery__item_4 {
-  background: url(/img/img4.svg);
+  background-image: url(/img/img4.svg);
 }
 .galery__item_5 {
-  background: url(/img/img5.svg);
+  background-image: url(/img/img5.svg);
 }
 .galery__item_6 {
-  background: url(/img/img6.svg);
+  background-image: url(/img/img6.svg);
 }
 .galery__title {
   color: rgb(32, 32, 39);
   font-size: 48px;
   font-weight: 700;
   line-height: 59px;
-  padding-top: 48px;
   padding-bottom: 24px;
+  width: 504px;
 }
 .galery__text {
   color: rgb(32, 32, 39);
@@ -224,6 +248,7 @@ body {
   font-weight: 400;
   line-height: 32px;
   padding-bottom: 36px;
+  width: 500px;
 }
 .galery__button {
   width: 247px;
@@ -235,6 +260,8 @@ body {
   font-size: 24px;
   font-weight: 600;
   text-align: center;
+  margin-right: 260px;
+  font-family: "Montserrat";
 }
 
 .footer {
@@ -246,4 +273,30 @@ body {
   line-height: 29px;
   text-align: center;
   padding-top: 61px;
+}
+
+.header__button:hover {
+  background: rgb(255, 255, 255);
+  color: black;
+}
+
+.header__button {
+  transition: all 0.5s;
+}
+
+.galery__button:hover {
+  background: rgb(255, 255, 255);
+  color: black;
+}
+
+.galery__button {
+  transition: all 0.5s;
+}
+
+.img__card {
+  transition: all 1s;
+}
+
+.img__card:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=style.css.map */

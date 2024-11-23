@@ -32,6 +32,7 @@
 }
 
 .banner{
+    display: none;
     width: 1717px;
     height: 51px;
 
@@ -47,6 +48,21 @@
 }
 .title{
     font-size: 40px;
+}
+.galery{
+
+    &__item{
+    height: 284px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    }
+}
+
+
+.footer{
+    font-size: 16px;
 }
 
 }

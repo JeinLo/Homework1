@@ -351,4 +351,14 @@ body {
   .title {
     font-size: 40px;
   }
+  .galery__item {
+    height: 284px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+  }
+  .footer {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
